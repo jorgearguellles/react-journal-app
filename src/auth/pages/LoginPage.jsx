@@ -15,16 +15,15 @@ export const LoginPage = () => {
     email: "jorge@google.com",
     password: "123456",
   });
+
   const isAuthenticating = useMemo(() => status === "checking", [status]);
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log({ email, password });
     dispatch(checkingAuthentication(email, password));
   };
 
   const onGoogleSignIn = () => {
-    console.log("Login by Google");
     dispatch(startGoogleSignIn());
   };
 
@@ -48,7 +47,7 @@ export const LoginPage = () => {
             <TextField
               label="Password"
               type="password"
-              placeholder="*********"
+              placeholder="Password"
               fullWidth
               name="password"
               value={password}
@@ -82,7 +81,7 @@ export const LoginPage = () => {
 
           <Grid container direction="row" justifyContent="end">
             <Link component={RouterLink} color="inherit" to="/auth/register">
-              Crate a Count
+              Crate Account
             </Link>
           </Grid>
         </Grid>
