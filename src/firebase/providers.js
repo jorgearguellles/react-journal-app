@@ -24,7 +24,7 @@ export const signInWithGoogle = async () => {
     }
 };
 
-export const signInWithUserAndPassword = async ({
+export const signInWithEmailAndPassword = async ({
     email,
     password,
     displayName,
@@ -36,7 +36,6 @@ export const signInWithUserAndPassword = async ({
             password
         );
         const { uid, photoURL } = resp.user;
-        console.log({ resp });
         return {
             ok: true,
             displayName,
