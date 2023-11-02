@@ -26,10 +26,13 @@ export const startRegisteringUserWithEmailPassword = ({
 }) => {
     return async (dispatch) => {
         dispatch(checkingCredentials());
-        const result = await signInWithEmailAndPassword({
-            email,
-            password,
-            displayName,
-        });
+        const { ok, uid, photoURL, errorMessage } =
+            await signInWithEmailAndPassword({
+                email,
+                password,
+                displayName,
+            });
+        if (!ok) return dispatch(logout({ errorMessage }));
+        dispatch(login({ uid, photoURL, email }));
     };
 };
