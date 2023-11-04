@@ -15,9 +15,9 @@ import { AuthLayout } from "../layout/AuthLayout";
 import { useForm } from "../../hooks";
 
 const formDataByDefault = {
-    email: "jorge@google.com",
-    password: "123456",
-    displayName: "Jorge Arias",
+    email: "",
+    password: "",
+    displayName: "",
 };
 
 const formValidations = {
@@ -61,7 +61,10 @@ export const RegisterPage = () => {
 
     return (
         <AuthLayout title="Create account">
-            <form onSubmit={onSubmit}>
+            <form
+                onSubmit={onSubmit}
+                className="animate__animated animate__fadeIn animate__faster"
+            >
                 <Grid container>
                     <Grid item xs={12} sx={{ mt: 2 }}>
                         <TextField

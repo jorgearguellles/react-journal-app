@@ -2,6 +2,7 @@ import {
     signInWithGoogle,
     signInWithEmailPassword,
     logInWithEmailPassword,
+    logOutFirebase,
 } from "../../firebase/providers";
 import { checkingCredentials, login, logout } from "./";
 
@@ -32,7 +33,7 @@ export const startRegisteringUserWithEmailPassword = ({
             password,
             displayName,
         });
-        if (!ok) return dispatch(logout({ errorMessage }));
+        if (!result.ok) return dispatch(logout({ errorMessage }));
         dispatch(login(result));
     };
 };
@@ -46,5 +47,12 @@ export const startEmailPasswordLogIn = ({ email, password }) => {
         });
         if (!result.ok) return dispatch(logout(result));
         dispatch(login(result));
+    };
+};
+
+export const startFirebaseLogOut = () => {
+    return async (dispatch) => {
+        await logOutFirebase();
+        dispatch(logout({}));
     };
 };
