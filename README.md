@@ -49,7 +49,12 @@ src/
 
 ## 🎨 UI/UX
 
-[Espacio para capturas de pantalla de la aplicación]
+### Capturas de Pantalla
+
+![Login Screen](https://github.com/jorgearguellles/react-journal-app/blob/main/public/1.png)
+![Create Account Screen](https://github.com/jorgearguellles/react-journal-app/blob/main/public/2.png)
+![Dashboard](https://github.com/jorgearguellles/react-journal-app/blob/main/public/3.png)
+![Note Editor](https://github.com/jorgearguellles/react-journal-app/blob/main/public/4.png)
 
 ### Características de la Interfaz
 
@@ -122,9 +127,9 @@ Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
 
 Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
-## 👥 Autor
+## 👥 Desarrollador
 
-[Tu nombre] - [Tu email/website]
+Jorge Arias Argüelles - [LinkedIn](https://www.linkedin.com/in/jorgeariasarguelles/)
 
 ---
 
